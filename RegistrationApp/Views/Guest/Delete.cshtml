@@ -1,0 +1,141 @@
+﻿@model RegistrationApp.Models.Guest
+
+<form method="post" asp-action="Delete">
+    <input asp-for="GuestId" hidden />
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-info pl-3">Update Guest</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="firstName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="firstName" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="surName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="surName" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="email"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="email" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="phoneNumber"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="phoneNumber" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="checkIn"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="checkIn" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="checkOut"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="checkOut" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="roomType"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="roomType" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="roomNum"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="roomNum" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="advancePay"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="advancePay" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="duePay"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="duePay" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="totalAmount"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="totalAmount" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="entryBy"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="entryBy" disabled class="form-control" />
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+
+                        <div class="col">
+                            <input type="submit" class="btn btn-danger w-100" value="Delete"/>
+                        </div>
+                        <div class="col">
+                             <a asp-action="Index" class="btn btn-success w-100"><i class="fas fa-sign-out-alt"></i> Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+@*Client side validation*@
+@section Scripts{
+    @{<partial name="_ValidationScriptsPartial"/>}
+}
+

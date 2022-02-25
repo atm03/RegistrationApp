@@ -1,0 +1,153 @@
+﻿@model RegistrationApp.Models.Guest
+
+<form method="post">
+    <input asp-for="GuestId" hidden />
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-info pl-3">Update Guest</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="firstName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="firstName" class="form-control" />
+                        <span asp-validation-for="firstName" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="surName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="surName" class="form-control" />
+                        <span asp-validation-for="surName" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="email"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="email" class="form-control" />
+                        <span asp-validation-for="email" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="phoneNumber"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="phoneNumber" class="form-control" />
+                        <span asp-validation-for="phoneNumber" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="checkIn"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="checkIn" class="form-control" />
+                        <span asp-validation-for="checkIn" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="checkOut"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="checkOut" class="form-control" />
+                        <span asp-validation-for="checkOut" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="roomType"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="roomType" class="form-control" />
+                        <span asp-validation-for="roomType" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="roomNum"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="roomNum" class="form-control" />
+                        <span asp-validation-for="roomNum" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="advancePay"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="advancePay" class="form-control" />
+                        <span asp-validation-for="advancePay" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="duePay"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="duePay" class="form-control" />
+                        <span asp-validation-for="duePay" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="totalAmount"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="totalAmount" class="form-control" />
+                        <span asp-validation-for="totalAmount" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="entryBy"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="entryBy" class="form-control" />
+                        <span asp-validation-for="entryBy" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-100" value="Update"/>
+                        </div>
+                        <div class="col">
+                             <a asp-action="Index" class="btn btn-success w-100"><i class="fas fa-sign-out-alt"></i> Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+@*Client side validation*@
+@section Scripts{
+    @{<partial name="_ValidationScriptsPartial"/>}
+}
+
